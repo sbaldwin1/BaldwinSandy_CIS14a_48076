@@ -18,18 +18,14 @@
 	var hours=parseInt(Math.random()*20+30); //Hours worked in (hrs)
 	var payRate=10; //($'s/hrs)
 	var ovt=40; //Hour at which over time starts
+	var payChk; //Declareation of PayCheck in Dollars
 	//Output the inputs
-	document.write("<h1>hours worked    = "+hours  +"   </h1>");
-	document.write("<h1>Pay Rate        = $"+payRate+"  </h1>");
-	document.write("<h1>Over time start = "+ovt+"  (hrs)</h1>");
+	document.write("<h1>hours worked = "+hours  +"(hrs)</h1>");
+	document.write("<h1>Pay Rate = $"+payRate+"   </h1>");
+	document.write("<h1>Over Time start = "+ovt+" (hrs)</h1>");
 	//Determine our paycheck
-	var payChk=hours*payRate //Straight
-	switch(hours>ovt){
-		case true:{
-			payChk+=(hours-ovt)*payRate;//Added double time hours
-		}
-		default:
-	}
+	payChk=(hours<=ovt)?hours*payRate:
+		               hours*payRate+(hours-ovt)*payRate;
 	payChk=payChk.toFixed(2);
 	//Output our Pay Check
 	document.write("<h1>Our Pay Check = $"+payChk+"</h1>")
