@@ -14,41 +14,39 @@
 </head>
 
 <body>
-<h1>Retirement Table</h1>
+	<h1>Retirement Table</h1>
 <script type="text/javascript">
-//Setup the savings table
-	var balance = 100; //unit =$'s
-	var intRate = 5;//unit = percentage rate per arm
+	//Setup the savings table
+	var balance = 100;//unit = $'s
+	var intRate = 5;//unit = percentage rate per annual
 	var deposit = 500;//unit = $'s
 	var str="";
-	//Output the in
+	//Output the initial conditions
 	document.write("<p>Initial Balance = $"+balance+"</p>");
 	document.write("<p>Interest Rate = "+intRate+"%</p>");
-	document.write("<p>yearly Deposit = $"+deposit+"%</p>");
+	document.write("<p>Yearly Deposit = $"+deposit+"</p>");
 </script>
-
-<table width="200" border="1">
-  <tr>
-    <th>Year</th>
-    <th>Savings $</th>
-  </tr>
+	<table width="200" border="1">
+	<tr>
+	<th>Year</th>
+	<th>Savings $</th>
+	</tr>
 <script type="text/javascript">
 	//Generate a table
 	//++year=year++=year+1=(year+=1)
-	for(var year=1;year<=100;++year){
-		str+="<tr>";
-		str+=("<td>"+year+"</td>");
-		//Calculate the balance
-		//balance=balance*(1+inRate/100);
-		balance*=(1+inRate/100);
-		balance+=deposit;
-		balance=balance.toFixed(2);
-		str+=("<td>"+balance+"</td>");
-		str+="</tr>";
+	for(var year=1;year<=50;++year){
+	str+="<tr>";
+	str+=("<td>"+year+"</td>");
+	//Calculate the balance
+	//balance=balance*(1+intRate/100);
+	balance*=(1+intRate/100);
+	balance+=deposit;
+	balance=balance.toFixed(2);
+	str+=("<td>"+balance+"</td>");
+	str+="</tr>";
 	}
 	document.write(str);
 </script>
-</table>
-
+	</table>
 </body>
 </html>
