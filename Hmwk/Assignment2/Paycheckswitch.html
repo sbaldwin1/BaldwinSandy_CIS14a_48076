@@ -2,7 +2,7 @@
 	/*
 	 Sandy Baldwin
    	 Sept. 17th, 2014
-   	 Purpose: attempt triple time
+   	 Purpose: attempt triple time 
 	*/
 </script>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -18,13 +18,11 @@
 	var hours=parseInt(Math.random()*40+70); //Hours worked in (hrs)
 	var payRate=10; //($'s/hrs)
 	var ovt=40; //Hour at which over time starts
-	var payChk; //Declareation of PayCheck in Dollars
 	
 	//Output the inputs
-	document.write("<h1>hours worked = "+hours  +    "</h1>");
-	document.write("<h1>Pay Rate     = $"+payRate+"   </h1>");
-	document.write("<h1>Over Time start = "+ovt+"(hrs)</h1>");
-	
+	document.write("<h1>hours worked = "+hours  +"</h1>");
+	document.write("<h1>Pay Rate = $"+payRate+"   </h1>");
+	document.write("<h1>Over Time start = "+ovt+" (hrs)</h1>");
 	//Determine our paycheck
 	switch(hours<ovt){
 		case true:{
