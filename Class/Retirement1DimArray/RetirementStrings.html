@@ -14,63 +14,61 @@
 </head>
 
 <body>
-	<h1>Retirement Table</h1>
 <script type="text/javascript">
 	//Setup the savings table
 	var balance = 0;//unit = $'s
-	var intRate = 5;//unit = percentage rate per annual
+	var intRate = 7;//unit = percentage rate per annum
 	var deposit = 7500;//unit = $'s
 	var str="";
-	//Output the initial conditions
-	document.write("<p>Initial Balance = $"+balance+"</p>");
-	document.write("<p>Interest Rate = "+intRate+"%</p>");
-	document.write("<p>Yearly Deposit = $"+deposit+"</p>");
+	
 	//Declare your arrays
 	var years=[];
 	var savings=[];
 	var interest=[];
 	var yearDep=[];
-	//Initaliize the first element
+	
+	//Initialize the first element
 	years[0]=0;
 	savings[0]=balance;
 	interest[0]=0;
 	yearDep[0]=0;
 	
-	//Populate the array
+	//Populate the arrays
 	for(var year=1;year<=50;++year){
-		years[years]=year;
-	//calculate the balance	
-	interest[year]=savings[year-1]*intRate/100;
-	interest[year]=interest[year].toFixed(2);
-	interest[year]=parseFloat(interest[year]);
-	savings[year]=savings[year-1]+interest[year];
+	years[year]=year;
+	
+	//Calculate the balance
+	//balance=balance*(1+intRate/100);
+	interest[year]=savings[year-1]*intRate/100
 	yearDep[year]=deposit;
-	savings[year]+=yearDep[year];
-	savings[year]=savings[year].toFixed(2);
-	savings[year]=parseFloat(savings[year]);
+	savings[year]=savings[year-1]+interest[year]+yearDep[year];	
 	}
+
+	//Output the initial conditions
+	document.write("<p>Initial Balance = $"+balance+"</p>");
+	document.write("<p>Interest Rate = "+intRate+"%</p>");
+	document.write("<p>Yearly Deposit = $"+deposit+"</p>");
 </script>
-	<table width="200" border="1">
-	<tr>
+<table width="200" border="1">
+<tr>
 	<th>Year</th>
 	<th>Savings $</th>
-    <th>Interest $</th>
-    <th>Deposit $</th>
-	</tr>
+	<th>Interest $</th>
+	<th>Deposit $</th>
+</tr>
 <script type="text/javascript">
-	//Generate a table
-	//++year=year++=year+1=(year+=1)
+
 	//Display the table
 	for(var year=1;year<=50;++year){
 	str+="<tr>";
-	str+=("<td>"+years[year]+"</td>");
-	str+=("<td>"+savings[year]+"</td>");
-	str+=("<td>"+interest[year]+"</td>");
-	str+=("<td>"+yearDep[year]+"</td>");
+	str+=("<td>"+years[year].toFixed(2)+"</td>");
+	str+=("<td>"+savings[year].toFixed(2)+"</td>");
+	str+=("<td>"+interest[year].toFixed(2)+"</td>");
+	str+=("<td>"+yearDep[year].toFixed(2)+"</td>");
 	str+="</tr>";
 	}
 	document.write(str);
 </script>
-	</table>
+</table>
 </body>
 </html>
