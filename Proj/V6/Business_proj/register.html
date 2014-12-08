@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Sandy's meatball register</title>
+		<meta charset="utf-8">
+		<style>
+			* { font-family: sans-serif; }
+			body { padding: 0; border: 0; margin: 0 0 0 20px; }
+			.nav { padding: 0; margin: 0 0 0 -10px; }
+			.nav li { float: left; margin: 0 5px; list-style: none; font-size: 14px; }
+			em { clear: left; font-size: 14px; display: block; padding-top: 10px; }
+
+			a { color: black; text-decoration: none; border-bottom: 1px dashed black; }
+			a:hover { border-bottom: 1px solid red; }
+			
+
+			ol { margin: 0; padding: 0 0 0 20px; }
+			ol>li { font-size: 20px; margin-top: 6px; }
+
+			.random { margin: 0; padding: 0; list-style: none; }
+			.random li { float: left; }
+			
+			h2 { clear: center; }
+
+			
+
+		</style>
+        <script src="javascript/cookies.js" defer async></script>
+		<script src="javascriptforpage/ga.js" defer async></script><script>
+		//google analytic code
+		setTimeout(function(){
+			var ga = document.createElement('script');
+			ga.async = true;
+			ga.defer = true;
+			ga.src = 'http://www.google-analytics.com/ga.js';
+			ga.onload = function(){try{_gat._getTracker('UA-19882353-1')._trackPageview();}catch(e){window.console&&console.log("ga fail :'( ");};};
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(ga, s);
+		}, 10);
+		</script>
+	</head>
+	<body>
+		<h1><a href="index.html">Sandy's Meatball</a></h1>
+		<ul class="nav">
+				<li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="catalogs.html">Shopping</a></li>
+				<li><a href="contact.html">Contact me</a></li>
+		</ul>
+        <br/>
+		<p>
+			<em>
+		<div id="noaccount"><a href="register.html">Don't have an account? Create one now.</a></div>
+			</em>
+		</p>
+
+<h3>Welcome to Sandy's Meatball Store</h3>
+	</li>
+	
+	<li class="focused">
+		<label class="desc" for="email">
+			Email Address <span class="req">*</span>
+		</label>
+		<div>
+			<input id="email" name="email" class="field text full" type="text">
+		</div>
+	</li>
+
+	<li class="complex">
+		<label class="desc" for="password">
+			Password <span class="req">*</span>
+		</label>
+		<div>
+		<span class="left">
+			<input id="password" name="password" class="field text addr" value="" type="password">
+		</span>
+        <br/>
+		</div>
+	</li>
+     <br/>
+	<li class="buttons">
+		<div>
+		<input id="signupButton" class="btTxt submit translate" value="Create Account" onclick="submitSignup(); return false;" type="submit"><br>
+		</div>
+
+
+		
+
+	
+</body></html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>About Sandy's</title>
+		<meta charset="utf-8">
+		<style>
+			* { font-family: sans-serif; }
+			body { padding: 0; border: 0; margin: 0 0 0 25px; }
+			.nav { padding: 0; margin: 0 0 0 -10px; }
+			.nav li { float: left; margin: 0 5px; list-style-type: none; font-size: 14px; }
+			em { clear: center; font-size: 14px; display: block; padding-top: 10px; }
+
+			a { color: black; text-decoration: none; border-bottom: 1px dashed black; }
+			a:hover { border-bottom: 1px solid red; }
+
+			.rules { padding: 0 0 0 20px; margin: 0; }
+			.rules li { margin-bottom: 5px; font-size: 16px; }
+			.rules li ul { margin-top: 5px; }
+		</style>
+<script src="jscode/cookies.js" defer async></script>			
+<script src="jscode1/ga.js" defer async></script>
+<script>
+//function to make an alert box
+function phrases() {
+var sandy = ["Let's Learn about Sandy!", "Who's Sandy?", "What in the world who is Sandy!?","Want to know about Sandy?"];
+var mathrand = Math.floor(Math.random() * sandy.length);
+var phrase = sandy[mathrand];
+alert(phrase);
+}
+phrases();
+
+   //google analytic code
+    new function(){
+      var ga = document.createElement('script');
+      ga.async = true;
+      ga.defer = true;
+      ga.src = 'http://www.google-analytics.com/ga.js';
+      ga.onload = function(){try{_gat._getTracker('UA-19882353-1')._trackPageview();}catch(e){window.console&&console.log("ga fail :'( ");};};
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    };
+	</script>
+
+	</head>
+	<body>
+		<h1><a href="index.html">Sandy's Blog</a></h1>
+		<ul class="nav">
+				<li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="diary.html">Sandy's Diary</a></li>
+				<li><a href="try.html">About This Site</a></li>
+                <li><a href="random.html">Random</a></li>
+				<li><a href="contact.html">Contact me</a></li>
+              </ul>  
+                <br/>
+		<p>
+			<em>
+				This is about me (Sandy)!! Check out the console log.
+			</em>
+		</p>
+        
+
+<script>
+//function tells my name, sex, age
+function san() {
+var name = ["Sandy"];
+var sex = ["woman"];
+var age = [1982];
+var who = {
+	n: name,
+	s: sex,
+	a: age,
+};
+return who;
+}
+function sand1(who) {
+console.log("This person's name is " + who.n + ". She was born in year " + who.a + " and she is really an awesome " + who.s + "!");
+}
+var sandyb = san();
+sand1(sandyb);
+
+//function that tells my fav food
+var food = {
+pizza: "buffalo chicken",
+snack: "sunflower seeds",
+drink: "Coke",
+fastfood: "In n Out",
+veggies: false,
+vegout: function() {
+if (!this.veggies) {
+this.veggies = true;
+console.log("Sandy likes this particular snack, " + this.snack +" with her favorite fizzy drink, " + this.drink + ".\n\n If you want something from her, you can bribe her with " +this.pizza+ " pizza plus ranch dipping and " +this.fastfood + ".");
+}
+},
+foodie: function() {
+if (this.veggies) {
+this.veggies = false;
+}
+}
+};
+food.vegout();
+food.foodie();
+
+</script>
+
+<img src="http://lorempixel.com/400/200/sports" />
+
+
+
+</body></html>
+
+
+
+
+
+
+
+

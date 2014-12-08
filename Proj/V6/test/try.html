@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Sandy's About this site page</title>
+		<meta charset="utf-8">
+		<style>
+			* { font-family: sans-serif; }
+			body { padding: 0; border: 0; margin: 0 0 0 25px; }
+			.nav { padding: 0; margin: 0 0 0 -10px; }
+			.nav li { float: left; margin: 0 5px; list-style-type: none; font-size: 14px; }
+			em { clear: center; font-size: 14px; display: block; padding-top: 10px; }
+
+			a { color: black; text-decoration: none; border-bottom: 1px dashed black; }
+			a:hover { border-bottom: 1px solid red; }
+
+			.rules { padding: 0 0 0 20px; margin: 0; }
+			.rules li { margin-bottom: 5px; font-size: 16px; }
+			.rules li ul { margin-top: 5px; }
+		</style>
+<script src="jscode/cookies.js" defer async></script>	
+<script src="jscode1/ga.js" defer async></script>
+<script>
+   //google analytic code
+    new function(){
+      var ga = document.createElement('script');
+      ga.async = true;
+      ga.defer = true;
+      ga.src = 'http://www.google-analytics.com/ga.js';
+      ga.onload = function(){try{_gat._getTracker('UA-19882353-1')._trackPageview();}catch(e){window.console&&console.log("ga fail :'( ");};};
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    };
+
+
+docCookies.setItem("test0", "Hello world!");
+docCookies.setItem("test1", "Unicode test: \u00E0\u00E8\u00EC\u00F2\u00F9", Infinity);
+docCookies.setItem("test2", "Hello world!", new Date(2020, 5, 12));
+docCookies.setItem("test3", "Hello world!", new Date(2027, 2, 3), "/blog");
+docCookies.setItem("test4", "Hello world!", "Wed, 19 Feb 2127 01:04:55 GMT");
+docCookies.setItem("test5", "Hello world!", "Fri, 20 Aug 88354 14:07:15 GMT", "/home");
+docCookies.setItem("test6", "Hello world!", 150);
+docCookies.setItem("test7", "Hello world!", 245, "/content");
+docCookies.setItem("test8", "Hello world!", null, null, "example.com");
+docCookies.setItem("test9", "Hello world!", null, null, null, true);
+docCookies.setItem("test1;=", "Safe character test;=", Infinity);
+ 
+alert(docCookies.keys().join("\n"));
+alert(docCookies.getItem("test1"));
+alert(docCookies.getItem("test5"));
+docCookies.removeItem("test1");
+docCookies.removeItem("test5", "/home");
+alert(docCookies.getItem("test1"));
+alert(docCookies.getItem("test5"));
+alert(docCookies.getItem("unexistingCookie"));
+alert(docCookies.getItem());
+alert(docCookies.getItem("test1;="));
+
+	</script>
+
+	</head>
+	<body>
+		<h1><a href="index.html">Sandy's Blog</a></h1>
+		<ul class="nav">
+				<li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="diary.html">Sandy's Diary</a></li>
+				<li><a href="try.html">About this Site</a></li>
+                <li><a href="random.html">Random</a></li>
+				<li><a href="contact.html">Contact me</a></li>
+                </ul>
+                <br/>
+		<p>
+			<em>
+				About this site
+			</em>		
+            </p>
+            
+           <div> 
+  	<center><script type="text/javascript"> 
+    	document.write("<h2>Sandy's Blog</h2>") 
+  	</script> 
+    <p>This site is my testing ground of javascript codes. Merry Xmas </p></center>
+    
+ </div>
+
+
+
+</body></html>
+
+
+
+
+
+
+
+
