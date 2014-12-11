@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>About Sandy's</title>
 		<meta charset="utf-8">
 		<style>
@@ -16,7 +16,22 @@
 			.rules { padding: 0 0 0 20px; margin: 0; }
 			.rules li { margin-bottom: 5px; font-size: 16px; }
 			.rules li ul { margin-top: 5px; }
-		</style>
+		h1 {
+	color: #FFF;
+}
+h2 {
+	color: #FFF;
+}
+h3 {
+	color: #FFF;
+}
+        a:link {
+	color: #FFF;
+}
+        a:visited {
+	color: #CCC;
+}
+        </style>
 <script src="jscode/cookies.js" defer async></script>			
 <script src="jscode1/ga.js" defer async></script>
 <script>
@@ -42,8 +57,8 @@ phrases();
 	</script>
 
 	</head>
-	<body>
-		<h1><a href="index.html">Sandy's Blog</a></h1>
+	<body background="photo-effect-359981_640.jpg" text="#FFFFFF" link="#FFFFFF">
+	<h1><a href="index.html">Sandy's Blog</a></h1>
 		<ul class="nav">
 				<li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
@@ -55,12 +70,39 @@ phrases();
                 <br/>
 		<p>
 			<em>
-				This is about me (Sandy)!! Check out the console log.
-			</em>
+				This is about me!
+		  </em>
 		</p>
         
+<p>I made a function that tells my name, gender, and my age.
+</p>
+<p><code>function san() {
+  </code></p>
+<p><code>var name = ["Sandy"];
+</code></p>
+<p><code>var sex = ["woman"];
+  </code></p>
+<p><code>var age = [1982];
+  </code></p>
+<p><code>var who = {
+  n: name,
+  s: sex,
+  a: age,
+  };
+  </code></p>
+<p><code>return who;
+  }
+  </code></p>
+<p><code>function sand1(who) {</code></p>
+<p><code> document.write("This person's name is " + who.n + ". She was born in year " + who.a + " and she is really an awesome " + who.s + "!");
+  }
+  </code></p>
+<p><code>var sandyb = san();  </code></p>
+<p><code>sand1(sandyb); </code></p>
 
-<script>
+<p><strong><em>Output →</em></strong></p>
+<p>
+  <script>
 //function tells my name, sex, age
 function san() {
 var name = ["Sandy"];
@@ -74,11 +116,36 @@ var who = {
 return who;
 }
 function sand1(who) {
-console.log("This person's name is " + who.n + ". She was born in year " + who.a + " and she is really an awesome " + who.s + "!");
+document.write("This person's name is " + who.n + ". She was born in year " + who.a + " and she is really an awesome " + who.s + "!");
 }
 var sandyb = san();
 sand1(sandyb);
-
+</script>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+  Another function that tells you what's my favorite foods.</p>
+<p><code>var food = {<br>
+  pizza: &quot;buffalo chicken&quot;,<br>
+  snack: &quot;sunflower seeds&quot;,<br>
+  drink: &quot;Coke&quot;,<br>
+  fastfood: &quot;In n Out&quot;,<br>
+  veggies: false,<br>
+  vegout: function() {<br>
+  if (!this.veggies) {<br>
+  this.veggies = true;<br>
+  document.write(&quot;Sandy likes this particular snack, &quot; + this.snack +&quot; with her favorite fizzy drink, &quot; + this.drink + &quot;.\n\n If you want something from her, you can bribe her with &quot; +this.pizza+ &quot; pizza plus ranch dipping and &quot; +this.fastfood + &quot;.&quot;);<br>
+  }<br>
+  },<br>
+  foodie: function() {<br>
+  if (this.veggies) {<br>
+  this.veggies = false;<br>
+  }<br>
+  }<br>
+  };<br>
+  food.vegout();<br>
+  food.foodie();</code></p>
+<p><strong><em>Output →</em></strong><br>
+<script>
 //function that tells my fav food
 var food = {
 pizza: "buffalo chicken",
@@ -89,7 +156,7 @@ veggies: false,
 vegout: function() {
 if (!this.veggies) {
 this.veggies = true;
-console.log("Sandy likes this particular snack, " + this.snack +" with her favorite fizzy drink, " + this.drink + ".\n\n If you want something from her, you can bribe her with " +this.pizza+ " pizza plus ranch dipping and " +this.fastfood + ".");
+document.write("Sandy likes this particular snack, " + this.snack +" with her favorite fizzy drink, " + this.drink + ".\n\n If you want something from her, you can bribe her with " +this.pizza+ " pizza plus ranch dipping and " +this.fastfood + ".");
 }
 },
 foodie: function() {
@@ -101,9 +168,12 @@ this.veggies = false;
 food.vegout();
 food.foodie();
 
-</script>
+</script> 
 
-<img src="http://lorempixel.com/400/200/sports" />
+</p>
+<p>&nbsp;</p>
+<p>Random images for your view pleasure</p>
+<p><img src="http://lorempixel.com/400/200/sports" width="621" height="409" /></p>
 
 
 

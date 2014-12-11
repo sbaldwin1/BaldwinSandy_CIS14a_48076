@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Sandy's About this site page</title>
 		<meta charset="utf-8">
 		<style>
 			* { font-family: sans-serif; }
-			body { padding: 0; border: 0; margin: 0 0 0 25px; }
+			body {
+	padding: 0;
+	border: 0;
+	margin: 0 0 0 25px;
+	background-color: #000;
+}
 			.nav { padding: 0; margin: 0 0 0 -10px; }
 			.nav li { float: left; margin: 0 5px; list-style-type: none; font-size: 14px; }
 			em { clear: center; font-size: 14px; display: block; padding-top: 10px; }
@@ -16,7 +21,19 @@
 			.rules { padding: 0 0 0 20px; margin: 0; }
 			.rules li { margin-bottom: 5px; font-size: 16px; }
 			.rules li ul { margin-top: 5px; }
-		</style>
+		a:link {
+	color: #FFF;
+}
+a:visited {
+	color: #CCC;
+}
+h1 {
+	color: #FFF;
+}
+        body,td,th {
+	color: #FFF;
+}
+        </style>
 <script src="jscode/cookies.js" defer async></script>	
 <script src="jscode1/ga.js" defer async></script>
 <script>
@@ -31,7 +48,7 @@
       s.parentNode.insertBefore(ga, s);
     };
 
-
+/*
 docCookies.setItem("test0", "Hello world!");
 docCookies.setItem("test1", "Unicode test: \u00E0\u00E8\u00EC\u00F2\u00F9", Infinity);
 docCookies.setItem("test2", "Hello world!", new Date(2020, 5, 12));
@@ -54,12 +71,12 @@ alert(docCookies.getItem("test5"));
 alert(docCookies.getItem("unexistingCookie"));
 alert(docCookies.getItem());
 alert(docCookies.getItem("test1;="));
-
+*/
 	</script>
 
 	</head>
-	<body>
-		<h1><a href="index.html">Sandy's Blog</a></h1>
+	<body bgcolor="#333333" background="177899449_a0c8507fee_b.jpg" text="#FFFFFF" link="#FFFFFF">
+	<h1><a href="index.html">Sandy's Blog</a></h1>
 		<ul class="nav">
 				<li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
@@ -79,9 +96,54 @@ alert(docCookies.getItem("test1;="));
   	<center><script type="text/javascript"> 
     	document.write("<h2>Sandy's Blog</h2>") 
   	</script> 
-    <p>This site is my testing ground of javascript codes. Merry Xmas </p></center>
+    <p><strong><u>This site is my testing ground of javascript codes. Merry Xmas </u></strong></p></center>
     
  </div>
+ 
+ <script>
+ //playing around with while loops
+ var guide = true;
+var me = Math.floor(Math.random() * 4);
+var pool = Math.floor(Math.random() * 2 + 9);
+var swim = 0;
+
+while (guide) {
+  if (me) {
+    document.write("I can run " + swim + " 50 miles");
+    pool += swim;
+    
+    if (swim >= 9) {
+      document.write("I failed to run 50 miles");
+      guide = false;
+    } else {
+      me = Math.floor(Math.random() * 10);
+    }
+  } else {
+    document.write("Yes! I really did it!");
+    guide = false;
+  }
+}
+ </script>
+ <p>&nbsp;</p>
+ <script>
+ //playing with the switch
+ var jerry = prompt("Do you think Sandy do enjoy coding? You may type in the answer: Hell yes! or no or yes");
+
+switch(jerry){
+  case 'Hell yes!':
+    document.write("Of course! What a silly question!!");
+    break;
+  case 'no':
+    document.write("Oh well, Sandy thinks your life sucks.");
+    break;
+  case 'yes':
+    document.write("I am so glad to hear that.");
+    break;
+  default:
+    document.write("I'm sad you cannot even answer this easy question" + jerry + "...by the way, you sucks anyway.");
+}
+ 
+ </script>
 
 
 
