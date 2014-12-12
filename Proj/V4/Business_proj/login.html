@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Sandy's meatball login</title>
+		<meta charset="utf-8">
+		<style>
+			* { font-family: sans-serif; }
+			body {
+	padding: 0;
+	border: 0;
+	margin: 0 0 0 20px;
+	background-image: url(clean_grey_background-1024x768.jpg);
+}
+			.nav { padding: 0; margin: 0 0 0 -10px; }
+			.nav li { float: left; margin: 0 5px; list-style: none; font-size: 14px; }
+			em { clear: left; font-size: 14px; display: block; padding-top: 10px; }
+
+			a { color: black; text-decoration: none; border-bottom: 1px dashed black; }
+			a:hover { border-bottom: 1px solid red; }
+			
+			/**/
+
+			ol { margin: 0; padding: 0 0 0 20px; }
+			ol>li { font-size: 20px; margin-top: 6px; }
+			img { width: 50px; height: 50px; border: 1px solid black; margin: 6px; overflow: hidden; }
+			.random { margin: 0; padding: 0; list-style: none; }
+			.random li { float: left; }
+			
+			h2 { clear: center; }
+
+
+
+		body,td,th {
+	color: #FFFFFF;
+}
+a:link {
+	color: #FFFFFF;
+}
+a:visited {
+	color: #C8C8C8;
+}
+        </style>
+     <script src="javascript/cookies.js" defer async></script>
+		<script src="javascriptforpage/ga.js" defer async></script><script>
+		setTimeout(function(){
+			var ga = document.createElement('script');
+			ga.async = true;
+			ga.defer = true;
+			ga.src = 'http://www.google-analytics.com/ga.js';
+			ga.onload = function(){try{_gat._getTracker('UA-19882353-1')._trackPageview();}catch(e){window.console&&console.log("ga fail :'( ");};};
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(ga, s);
+		}, 10);
+		</script>
+	</head>
+	<body text="#FFFFFF" link="#FFFFFF">
+	<h1><a href="index.html">Sandy's Meatball</a></h1>
+		<ul class="nav">
+				<li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="catalogs.html">Shopping</a></li>
+				<li><a href="contact.html">Contact me</a></li>
+		</ul>
+        <br/>
+        <center><script type="text/javascript"> 
+    	document.write("<h2>Sandy's Meatball Store</h2>") 
+  	</script> </center>
+		<p>
+	<em>
+				<div id="noaccount"><a href="register.html">Don't have an account? Create one now.</a></div>
+	</em>
+		</p>
+
+	<form id="loginForm" name="f" action="" method="post">
+	<div class="info">
+	<div>
+	  <div align="center"><em><strong>Please log in.</strong></em><strong></strong></div>
+	</div>
+	</div>
+  
+	<ul>	
+		<li>
+			<div>
+				<label class="desc" for="email">
+				<div align="center"><u>Email Address</u></div>
+				</label>
+				<div align="center">
+				  <input id="email" name="email" class="field text large" type="text">
+			  </div>
+			</div>
+	  </li>
+      <div align="center"><br/>
+      </div>
+	    <li>
+			<div>
+				<label class="desc" for="password">
+				  <div align="center"><u>Password</u></div>
+				</label>
+				<div align="center">
+				  <input id="password" name="password" class="field text large" value="" type="password">
+			  </div>
+			</div>
+	  </li>
+                  
+                    <div align="center"><br/>
+                    </div>
+        <li>
+		    <div align="center"><u><span>
+		      <input id="remember" name="remember" class="checkbox field" value="1" type="checkbox">
+		      </span></u><u>Remember me.</u></div>
+		    <span>
+		    <label class="choice" for="remember">
+		      <div align="center"><br>
+		      </div>
+		        </label>
+			</span>
+		</li>
+		<li class="">
+		  <div align="center">
+		    <button type="submit" id="saveForm" class="button">Login</button>
+		    <a href="catalogs.html" class="negative button"></a>
+	      </div>
+	  </li>
+	</ul>
+    
+    <h2 align="center"><strong><u>Admin log in:</u></strong></h2>
+<p align="center"><tt>(to test: Mark as username, sword for pass)</tt></p>
+<script>
+var count = 2;
+function validate() {
+var u = document.myform.username.value;
+var p = document.myform.pword.value;
+var valid = false;
+
+var admin = ["Sandy", "Mark", "Kevin", "John", "Melissa", "CookieMonster"]; 
+var password = ["pass", "sword", "gun", "baseball", "bo", "munster"]; 
+for (var i=0; i <admin.length; i++) {
+if ((u == admin[i]) && (p == password[i])) {
+valid = true;
+break;
+}
+}
+
+if (valid) {
+alert ("The login was successful");
+window.location = "index.html";
+return false;
+}
+
+var t = " tries";
+if (count == 1) {t = " try"}
+
+if (count >= 1) {
+alert ("Invalid username and/or password.  You have " + count + t + " left.");
+document.myform.username.value = "";
+document.myform.pword.value = "";
+setTimeout("document.myform.username.focus()", 25);
+setTimeout("document.myform.username.select()", 25);
+count --;
+}
+
+else {
+alert ("Still incorrect! You have no more tries left!");
+document.myform.username.value = "No more tries allowed!";
+document.myform.pword.value = "";
+document.myform.username.disabled = true;
+document.myform.pword.disabled = true;
+return false;
+}
+
+}
+
+</script>
+
+<form name = "myform">
+
+    <p>Enter your Admin username: 
+      <input type="text" name="username"> 
+      Enter the password: 
+      <input type="password" name="pword">
+  <input type="button" value="Log In" name="Submit" onclick= "validate()">
+    </p>
+
+</form>
+
+
+
+
+
+
+	
+</body></html>

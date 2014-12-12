@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Sandy's Random page</title>
+		<meta charset="utf-8">
+		<style>
+			* { font-family: sans-serif; }
+			body { padding: 0; border: 0; margin: 0 0 0 25px; }
+			.nav { padding: 0; margin: 0 0 0 -10px; }
+			.nav li { float: left; margin: 0 5px; list-style-type: none; font-size: 14px; }
+			em { clear: center; font-size: 14px; display: block; padding-top: 10px; }
+
+			a { color: black; text-decoration: none; border-bottom: 1px dashed black; }
+			a:hover { border-bottom: 1px solid blue; }
+			
+			.rules { padding: 0 0 0 20px; margin: 0; }
+			.rules li { margin-bottom: 5px; font-size: 16px; }
+			.rules li ul { margin-top: 5px; }
+
+		</style>
+<script src="jscode/cookies.js" defer async></script>			
+<script src="jscode1/ga.js" defer async></script>
+<script>
+document.cookie = "mtracker=somevalue; expires=0; path=/";
+
+   //google analytic code
+    new function(){
+      var ga = document.createElement('script');
+      ga.async = true;
+      ga.defer = true;
+      ga.src = 'http://www.google-analytics.com/ga.js';
+      ga.onload = function(){try{_gat._getTracker('UA-19882353-1')._trackPageview();}catch(e){window.console&&console.log("ga fail :'( ");};};
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    };
+	</script>
+
+	</head>
+	<body background="apple-no-equal-orange.jpg">
+	<h1><a href="index.html">Sandy's Blog</a></h1>
+		<ul class="nav">
+				<li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="diary.html">Sandy's Diary</a></li>
+				<li><a href="try.html">About this Site</a></li>
+                <li><a href="random.html">Random</a></li>
+				<li><a href="contact.html">Contact me</a></li>
+    </ul>
+                <br/>
+
+      <p>Trying something else </p>      
+<script>
+//playing with something else
+excalibur = "san yes no hi fu kun wse il or ca tu o ne g ai ha ya bu a wushu li ku fun jso pl arthur r u n e q qc lp mx xe zo de fr sad cse push sandy mark arthura gregory house mike goeth steve funny rummy fanny frasn flan flap";
+
+var arthur = "steve";
+var found = [];
+
+for(var i = 0; i < excalibur.length; i++) {
+	if (excalibur[i] === "s") {
+
+		for(var j = i; j < (arthur.length + i); j++) {
+			found.push(excalibur[j]);
+		}
+	}
+}
+
+if (found.length === 0) {
+	document.write("What's your name again?");
+} else {
+	document.write(found);
+}
+
+</script>
+
+
+	<p>
+			<em>
+				This is my attempt to create a table
+			</em>		
+    </p>
+
+<script type="text/javascript">
+//variable of X	
+var book = 1;//how much book
+var costs = 5;//cost per books 5$
+var str="";
+
+//Output the initial conditions
+document.write("<p>How many book is there? "+book+"</p>");
+document.write("<p>Cost per book = "+costs+"$ per a book</p>");
+;
+</script>
+<table width="200" border="1">
+<tr>
+<th>Books</th>
+<th>$</th>
+</tr>
+
+<script type="text/javascript">
+document.write("<p>Let's calculate</p>");
+document.write("<p><em>Obviously, I'm doing wrong - I'm bad at math.</em></p>");
+
+//Generate a table
+//loop runs 1000 times
+for(var quanity=1;quanity<=1000;++quanity){
+str+="<tr>";
+str+=("<td>"+quanity+"</td>");
+
+book*=(costs/3);
+book=book.toFixed(2);
+str+=("<td>"+book+"</td>");
+str+="</tr>";
+}
+document.write(str);
+  </script>
+</body></html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Sandy's meatball store</title>
+		<meta charset="utf-8">
+		<style>
+			* { font-family: sans-serif; }
+			body {
+	padding: 0;
+	border: 0;
+	margin: 0 0 0 20px;
+	background-image: url(clean_grey_background-1024x768.jpg);
+}
+			.nav { padding: 0; margin: 0 0 0 -10px; }
+			.nav li { float: left; margin: 0 5px; list-style: none; font-size: 14px; }
+			em { clear: left; font-size: 14px; display: block; padding-top: 10px; }
+
+			a { color: black; text-decoration: none; border-bottom: 1px dashed black; }
+			a:hover { border-bottom: 1px solid red; }
+
+
+		a:link {
+	color: #FFFFFF;
+}
+a:visited {
+	color: #CFCFCF;
+}
+        </style>
+        <script src="javascript/cookies.js" defer async></script>
+		<script src="javascriptforpage/ga.js" defer async></script>
+		<script src="simpleCart.js"></script>
+		<script>
+		//google analytic code
+		setTimeout(function(){
+			var ga = document.createElement('script');
+			ga.async = true;
+			ga.defer = true;
+			ga.src = 'http://www.google-analytics.com/ga.js';
+			ga.onload = function(){try{_gat._getTracker('UA-19882353-1')._trackPageview();}catch(e){window.console&&console.log("ga fail :'( ");};};
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(ga, s);
+		}, 10);
+		
+		 function show(shown, hidden) {
+        document.getElementById(shown).style.display='block';
+        document.getElementById(hidden).style.display='none';
+        return false;
+        }
+       
+        function AddtoCart() {
+                console.log( 'hi');
+                var x=document.getElementById('Items');
+                var new_row = x.rows[1].cloneNode(true);
+                var len = x.rows.length;
+                new_row.cells[0].innerHTML = len;
+   
+                var inp1 = new_row.cells[1].getElementsByTagName('input')[0];
+                inp1.id += len;
+                inp1.value = '';
+                var inp2 = new_row.cells[2].getElementsByTagName('input')[0];
+                inp2.id += len;
+                inp2.value = '';
+                x.appendChild( new_row );
+        }
+		
+		</script>
+	</head>
+	<body text="#FFFFFF" link="#FFFFFF">
+	<h1><a href="index.html">Sandy's Meatball</a></h1>
+		<ul class="nav">
+				<li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="catalogs.html">Shopping</a></li>
+				<li><a href="contact.html">Contact me</a></li>
+		</ul>
+        <br/>
+          <center>
+		<p>
+        In past 50 years, Sandy worked so hard by creating a perfect meatball. Glorified Mystery Meatball currently is on a sale.
+			<em>
+			spamspamspamspamspamspamspamspamspamspamspamspamspamspamspamspamspamspamspamspamspamspamspamspam
+			</em>
+		</p>
+        </center>
+   
+    <script type="text/javascript"> 
+    	document.write("<p>(To be finalized...):</p>") 
+  	</script> 
+
+
+
+<script type="text/javascript">
+function purchase() {
+var total = 0;
+if(document.getElementById("F2").a.checked == true) { total += parseFloat(document.getElementById("F2").a.value); }
+if(document.getElementById("F2").b.checked == true) { total += parseFloat(document.getElementById("F2").b.value); }
+if(document.getElementById("F2").c.checked == true) { total += parseFloat(document.getElementById("F2").c.value); }
+if(document.getElementById("F2").d.checked == true) { total += parseFloat(document.getElementById("F2").d.value); }
+if(document.getElementById("F2").e.checked == true) { total += parseFloat(document.getElementById("F2").e.value); }
+var ts = new String(total);
+if(ts.indexOf('.') < 0) { ts += '.00'; }
+if(ts.indexOf('.') == (ts.length - 2)) { ts += '0'; }
+document.getElementById("F2").T.value = ts;
+document.getElementById("F2").innerHTML = ts;
+}
+
+</script>
+<form id="F2" onsubmit="return false;">
+  <div align="center"><u><strong>What kind meatball do you wish to purchase?</strong></u><br />
+    <var>
+    <kbd>
+    <input name="a" onclick="purchase()" type="checkbox" value="39.99" />
+    Mystery Meatball ($39.99)<br />
+  <input name="b" onclick="purchase()" type="checkbox" value="0.99" />Special Mystery Meatball ($0.99)<br />
+  <input name="c" onclick="purchase()" type="checkbox" value="499.99" />Spicy Mystery Meatball ($499.99)<br />
+  <input name="d" onclick="purchase()" type="checkbox" value="9.99" />Sweet Mystery Meatball ($9.99)<br />
+  <input name="e" onclick="purchase()" type="checkbox" value="399.99" />Sour Mystery Meatball (399.99)<br />
+    Total: <input name="T" readonly size="10" type="text" /><br />
+  <input onclick="purchase()" type="button" value="Purchase" />&nbsp;</kbd></var></div>
+</form>
+
+	 <div id="Main">
+   
+        <h1 align="center"> Sandy's Meatball Store </h1>
+       
+       <p align="center"> View Cart    <a href="shopping_carts.html" onclick="return show('Cart','Main');"> <img src="javascriptforpage/cart.png" height=50px width=45px> </img> </a> </p>
+       
+       <table id="Items" align="center" border="1" bgcolor="#228B22">
+               
+                <tr>
+                        <td>Mystery Meatball</td>                   
+                        <td>$39.99</td>
+                        <td> <input type="image" src="javascriptforpage/cart.png" name="Cart" height="50px" width="45px" onclick="AddtoCart()"> </td>
+                </tr>
+               
+                <tr>
+                        <td>Special Mystery Meatball</td>
+                        <td>$0.99</td>
+                        <td> <input type="image" src="javascriptforpage/cart.png" name="Cart" height="50px" width="45px" onclick="AddtoCart()"> </td>
+                </tr>
+               
+                <tr>
+                        <td>Spicy Mystery Meatball</td>
+                        <td>$499.99</td>
+                        <td> <input type="image" src="javascriptforpage/cart.png" name="Cart" height="50px" width="45px" onclick="AddtoCart()"> </td>
+                </tr>
+                
+                 <tr>
+                        <td>Sweet Mystery Meatball</td>
+                        <td>$9.99</td>
+                        <td> <input type="image" src="javascriptforpage/cart.png" name="Cart" height="50px" width="45px" onclick="AddtoCart()"> </td>
+                </tr>
+                
+                <tr>
+                        <td>Sour Mystery Meatball</td>
+                        <td>$399.99</td>
+                        <td> <input type="image" src="javascriptforpage/cart.png" name="Cart" height="50px" width="45px" onclick="AddtoCart()"> </td>
+                </tr>
+       
+        </table>
+ 
+  </div>
+ 
+  <div id="Cart" style="display:none">
+       
+        <h1 align="center">Your Shopping Cart</h1>
+   
+        <table id="tablecart" align="center" border="1" bgcolor="#4B0082">
+       
+                <tr>
+                        <td>Total</td>
+                        <td id="Total"></td>
+                </tr>
+        </table>
+       
+   <p align="center"> <a href="shopping_carts.html" onclick="return show('Main','Cart');">Return</a> </p>
+ 
+  </div>
+  
+     <script>
+/*
+function tableCreate(){
+    var body = document.body,
+        tbl  = document.createElement('table');
+    tbl.style.width  = '200px';
+    tbl.style.border = "1px solid black";
+
+    for(var i = 0; i < 1; i++){
+        var tr = tbl.insertRow();
+        for(var j = 0; j < 1; j++){
+            if(i == 2 && j == 1){
+                break;
+            } else {
+                var td = tr.insertCell(); 
+                td.appendChild(document.createTextNode('Mystery Meatball'));
+				td.style.border = "1px solid black";
+				var td = tr.insertCell();
+				td.appendChild(document.createTextNode('Special Mystery Meatball'));
+				td.style.border = "1px solid black";
+				var td = tr.insertCell();
+				td.appendChild(document.createTextNode('Spicy Mystery Meatball'));
+				td.style.border = "1px solid black";
+				var td = tr.insertCell();
+				td.appendChild(document.createTextNode('Sweet Mystery Meatball'));
+                td.style.border = "1px solid black";
+				var td = tr.insertCell();
+				 td.appendChild(document.createTextNode('Sour Mystery Meatball'));
+				td.style.border = "1px solid black";
+                if(i == 1 && j == 1){
+                    td.setAttribute('rowSpan', '5');
+                }
+            }
+        }
+    }
+    body.appendChild(tbl);
+}
+tableCreate();
+</script></center>
+<table id="myTable" cellpadding="5" cellspacing="5" border="1" onClick="tester()">
+</table>
+
+  
+
+<script>
+var meatball;
+for(var j=0;j<5;j++)
+    {
+ meatball = {
+
+            quanity: "quanity = 0"+j,
+            price: "$100 times "+j,
+
+           }; 
+ var table = document.getElementById("myTable");
+ var row = table.insertRow(j);
+ var cell1 = row.insertCell(0);
+ var cell2 = row.insertCell(1); 
+
+cell1.innerHTML =meatball.quanity,
+cell2.innerHTML =meatball.price;
+    }*/
+</script>
+</body>
+
+</html>

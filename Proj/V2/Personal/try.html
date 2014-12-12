@@ -99,7 +99,6 @@ alert(docCookies.getItem("test1;="));
     <p><strong><u>This site is my testing ground of javascript codes. Merry Xmas </u></strong></p></center>
     
  </div>
- 
  <script>
  //playing around with while loops
  var guide = true;
@@ -109,14 +108,14 @@ var swim = 0;
 
 while (guide) {
   if (me) {
-    document.write("I can run " + swim + " 50 miles");
+    document.write("I ran" + swim + " 50 miles");
     pool += swim;
     
-    if (swim >= 9) {
+    if (swim >= 3) {
       document.write("I failed to run 50 miles");
       guide = false;
     } else {
-      me = Math.floor(Math.random() * 10);
+      me = Math.floor(Math.random() * 5);
     }
   } else {
     document.write("Yes! I really did it!");
@@ -127,7 +126,7 @@ while (guide) {
  <p>&nbsp;</p>
  <script>
  //playing with the switch
- var jerry = prompt("Do you think Sandy do enjoy coding? You may type in the answer: Hell yes! or no or yes");
+ var jerry = prompt("Do you think Sandy enjoys coding? You may type in the answer: Hell yes! or no or yes");
 
 switch(jerry){
   case 'Hell yes!':
@@ -140,9 +139,8 @@ switch(jerry){
     document.write("I am so glad to hear that.");
     break;
   default:
-    document.write("I'm sad you cannot even answer this easy question" + jerry + "...by the way, you sucks anyway.");
+    document.write("I'm sad that you cannot even answer this easy question!" + jerry + " by the way, you sucks anyway.");
 }
- 
  </script>
 
 
